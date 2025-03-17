@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire - Architecture de Von Neumann</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/von_neumann_young.jpg" alt="John von Neumann jeune" class="header-img">
+        <h1>Histoire de Von Neumann</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="composants.html">Composants Principaux</a></li>
+            <li><a href="fonctionnement.html">Fonctionnement</a></li>
+            <li><a href="histoire.html">Histoire</a></li>
+            <li><a href="webographie.html">Webographie</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="biography">
+            <h2>John von Neumann (1903-1957)</h2>
+            <div class="bio-content">
+                <img src="images/von_neumann_work.jpg" alt="Von Neumann au travail" class="bio-img">
+                <div class="bio-text">
+                    <h3>Un génie des mathématiques</h3>
+                    <p>Né à Budapest le 28 décembre 1903, John von Neumann était un mathématicien prodige qui a contribué à de nombreux domaines :</p>
+                    <ul>
+                        <li>Théorie des ensembles</li>
+                        <li>Mécanique quantique</li>
+                        <li>Économie</li>
+                        <li>Informatique</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline">
+            <h2>Chronologie de l'Architecture von Neumann</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <article class="timeline-card" onclick="this.classList.toggle('expanded')">
+                    <div class="timeline-dot"></div>
+                    <h3>1945</h3>
+                    <div class="timeline-content">
+                        <img src="images/edvac_report.jpg" alt="EDVAC Report" class="timeline-img">
+                        <p>Publication du "First Draft of a Report on the EDVAC", document fondateur de l'architecture von Neumann</p>
+                        <div class="timeline-details">
+                            <p>Ce document historique de 101 pages établit les bases de l'informatique moderne et introduit le concept de programme enregistré.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-card" onclick="this.classList.toggle('expanded')">
+                    <div class="timeline-dot"></div>
+                    <h3>1946</h3>
+                    <div class="timeline-content">
+                        <img src="images/eniac.jpg" alt="ENIAC" class="timeline-img">
+                        <p>Développement de l'ENIAC, un des premiers ordinateurs électroniques</p>
+                        <div class="timeline-details">
+                            <p>Premier ordinateur entièrement électronique, pesant 30 tonnes et occupant 167 m².</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-card" onclick="this.classList.toggle('expanded')">
+                    <div class="timeline-dot"></div>
+                    <h3>1949</h3>
+                    <div class="timeline-content">
+                        <img src="images/edvac.jpg" alt="EDVAC" class="timeline-img">
+                        <p>Construction de l'EDVAC, premier ordinateur basé sur l'architecture von Neumann</p>
+                        <div class="timeline-details">
+                            <p>Premier ordinateur à programme enregistré, marquant le début de l'ère moderne de l'informatique.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-card" onclick="this.classList.toggle('expanded')">
+                    <div class="timeline-dot"></div>
+                    <h3>1951</h3>
+                    <div class="timeline-content">
+                        <img src="images/ias.jpg" alt="IAS Machine" class="timeline-img">
+                        <p>Création de l'IAS machine à l'Institute for Advanced Study</p>
+                        <div class="timeline-details">
+                            <p>Ordinateur prototype qui a influencé la conception de nombreux ordinateurs ultérieurs.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="legacy">
+            <h2>Héritage</h2>
+            <div class="legacy-grid">
+                <article class="legacy-card" onmouseover="this.classList.add('active')" onmouseout="this.classList.remove('active')">
+                    <div class="legacy-icon">🔧</div>
+                    <h3>Architecture Moderne</h3>
+                    <p>Base fondamentale des processeurs actuels</p>
+                </article>
+
+                <article class="legacy-card" onmouseover="this.classList.add('active')" onmouseout="this.classList.remove('active')">
+                    <div class="legacy-icon">💻</div>
+                    <h3>Programmation</h3>
+                    <p>Évolution des langages de programmation</p>
+                </article>
+
+                <article class="legacy-card" onmouseover="this.classList.add('active')" onmouseout="this.classList.remove('active')">
+                    <div class="legacy-icon">🔄</div>
+                    <h3>Systèmes d'exploitation</h3>
+                    <p>Fondement des OS modernes</p>
+                </article>
+
+                <article class="legacy-card" onmouseover="this.classList.add('active')" onmouseout="this.classList.remove('active')">
+                    <div class="legacy-icon">📱</div>
+                    <h3>Technologies Mobiles</h3>
+                    <p>Influence sur les appareils portables</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Créé le : <span id="date"></span> | Par John Doe</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1103 @@
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #0984e3;
+    --accent-color: #00b894;
+    --background-color: #f5f6fa;
+    --text-color: #2d3436;
+    --gradient-1: linear-gradient(135deg, #6c5ce7, #0984e3);
+    --gradient-2: linear-gradient(135deg, #00b894, #00cec9);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.header-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 1rem;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.key-points {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.components {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.component-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.component-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.component-card h3 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.instruction-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.step-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.step-card.interactive {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, white, #f8f9fa);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid var(--accent-color);
+}
+
+.step-card.interactive:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.step-card.interactive h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.step-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-details {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s, opacity 0.3s;
+    overflow: hidden;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-out;
+}
+
+.step-details.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.step-details ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.step-details li {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.bus-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.bus-simulator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.bus-component {
+    padding: 1.5rem 3rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bus-line {
+    flex-grow: 1;
+    height: 6px;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    margin: 0 2rem;
+    position: relative;
+    border-radius: 3px;
+}
+
+.data-packet {
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 3px solid var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8px;
+    transition: left 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+.memory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.memory-table th, .memory-table td {
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    text-align: left;
+}
+
+.memory-table th {
+    background: var(--primary-color);
+    color: white;
+}
+
+.memory-visualization {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.memory-block {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.memory-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.memory-info {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.simulate-btn {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem 2rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.simulate-btn:hover {
+    background: var(--accent-color);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.simulate-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: translateX(-50%);
+    box-shadow: none;
+}
+
+.biography {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.bio-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bio-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: calc(100% - 4rem);
+    background: var(--secondary-color);
+    top: 2rem;
+}
+
+.timeline-card {
+    position: relative;
+    width: calc(50% - 30px);
+    margin: 2rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeline-card:nth-child(even) {
+    margin-left: auto;
+}
+
+.timeline-card:nth-child(even) .timeline-dot {
+    left: -36px;
+    right: auto;
+}
+
+.timeline-card:nth-child(odd) .timeline-dot {
+    right: -36px;
+    left: auto;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    top: 20px;
+    border: 4px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    height: 200px;
+    object-fit: cover;
+}
+
+.timeline-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+}
+
+.timeline-card.expanded .timeline-details {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+}
+
+.legacy-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+/* Legacy styles */
+.legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.legacy-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.legacy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.legacy-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.legacy-card.active {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.sources {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.source-category {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.source-list {
+    list-style: none;
+    padding: 0;
+}
+
+.source-list li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--background-color);
+}
+
+.source-list a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.source-list a:hover {
+    color: var(--accent-color);
+}
+
+.source-list p {
+    margin: 0.5rem 0 0 0;
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .instruction-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styles centrés pour tous les titres */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.step-card h3,
+.component-card h3,
+.memory-block h3,
+.bio-text h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.component-card h3::after,
+.step-card h3::after,
+.memory-block h3::after,
+.bio-text h3::after {
+    display: none;
+}
+
+/* Nouveaux styles pour l'en-tête animé */
+.animated-header {
+    background: var(--gradient-1);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+}
+
+/* Nouveaux styles pour la section héro */
+.lead-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--gradient-2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Grille des points clés */
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.point-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.point-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Nouveaux styles pour les composants interactifs */
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.component-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.component-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.component-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.component-content {
+    margin-top: 1.5rem;
+}
+
+/* Styles pour l'UAL */
+.operations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.operation {
+    padding: 0.8rem;
+    background: var(--gradient-1);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.operation:hover {
+    transform: scale(1.05);
+}
+
+/* Styles pour l'Unité de Contrôle */
+.control-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.control-step {
+    padding: 0.5rem 1rem;
+    background: var(--background-color);
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.control-step.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Styles pour la Mémoire */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.memory-cell {
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.memory-cell:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.memory-cell.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Styles pour les E/S */
+.io-simulation {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.io-input {
+    padding: 0.8rem;
+    border: 2px solid var(--background-color);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.io-output {
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+}
+
+.io-button {
+    padding: 0.8rem;
+    background: var(--gradient-2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.io-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Styles pour les animations des opérations */
+.operation-animation {
+    position: relative;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.operation-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: var(--accent-color);
+    transition: width 1s ease-in-out;
+}
+
+.operation-animation.active .operation-progress {
+    width: 100%;
+}
+
+/* Styles pour les cellules mémoire */
+.memory-cell {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.memory-cell.flash {
+    animation: flashEffect 0.3s;
+}
+
+/* Styles pour les boutons désactivés */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Animation pour l'effet flash */
+@keyframes flashEffect {
+    0% { background: var(--accent-color); color: white; }
+    100% { background: var(--background-color); color: var(--text-color); }
+}
+
+/* Amélioration du style des contrôles */
+.simulate-control {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background: var(--gradient-2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.simulate-control:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Style amélioré pour l'entrée/sortie */
+.io-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--background-color);
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.io-input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Styles pour l'Unité de Contrôle */
+.control-unit {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.control-panel {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.control-register {
+    background: #2d3436;
+    color: #00ff00;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.control-states {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.control-state {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.control-state.active {
+    background: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.control-monitor {
+    background: #2d3436;
+    color: #00ff00;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    min-height: 100px;
+    white-space: pre-line;
+}
+
+/* Styles pour la Mémoire Centrale */
+.memory-system {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    background: var(--background-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.memory-header {
+    grid-column: 1/-1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.memory-cell {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.memory-cell:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.memory-cell.active {
+    background: var(--accent-color);
+    color: white;
+    animation: pulse 1s infinite;
+}
+
+.memory-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.memory-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--gradient-2);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.memory-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.memory-status {
+    flex-grow: 1;
+    text-align: right;
+    color: var(--accent-color);
+}
+
+/* Styles pour éviter les conflits avec la grille mémoire */
+.memory-cells {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.memory-cell {
+    background: white;
+    padding: 0.8rem;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    border: 1px solid var(--background-color);
+}
+
+.memory-cell:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.memory-cell.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Correction des styles pour l'animation des opérations */
+.operation-animation {
+    position: relative;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Styles centrés pour les composants */
+.components {
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.component-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.operations {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.control-unit {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.memory-system {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.io-simulation {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.operation-result {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.control-register {
+    text-align: center;
+}
+
+.control-monitor {
+    text-align: center;
+}
+
+.memory-header {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.memory-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.memory-status {
+    text-align: center;
+    margin-top: 1rem;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctionnement - Architecture de Von Neumann</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fonctionnement de l'Architecture</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="composants.html">Composants Principaux</a></li>
+            <li><a href="fonctionnement.html">Fonctionnement</a></li>
+            <li><a href="histoire.html">Histoire</a></li>
+            <li><a href="webographie.html">Webographie</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="cycle-instruction">
+            <h2>Le Cycle d'Instruction</h2>
+            <div class="instruction-steps">
+                <div class="step-card interactive" onclick="showStepDetails(1)">
+                    <div class="step-number">1</div>
+                    <h3>Recherche (Fetch)</h3>
+                    <div class="step-details" id="step1">
+                        <p>L'unité de contrôle :</p>
+                        <ul>
+                            <li>Lit l'adresse dans le compteur ordinal (CO)</li>
+                            <li>Accède à la mémoire à cette adresse</li>
+                            <li>Copie l'instruction dans le registre d'instruction</li>
+                            <li>Incrémente le compteur ordinal</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card interactive" onclick="showStepDetails(2)">
+                    <div class="step-number">2</div>
+                    <h3>Décodage (Decode)</h3>
+                    <div class="step-details" id="step2">
+                        <p>L'unité de contrôle analyse l'instruction :</p>
+                        <ul>
+                            <li>Identifie l'opération à effectuer</li>
+                            <li>Détermine les opérandes nécessaires</li>
+                            <li>Localise les données en mémoire</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card interactive" onclick="showStepDetails(3)">
+                    <div class="step-number">3</div>
+                    <h3>Exécution (Execute)</h3>
+                    <div class="step-details" id="step3">
+                        <p>L'UAL traite l'instruction :</p>
+                        <ul>
+                            <li>Effectue les calculs demandés</li>
+                            <li>Réalise les opérations logiques</li>
+                            <li>Utilise les registres temporaires</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card interactive" onclick="showStepDetails(4)">
+                    <div class="step-number">4</div>
+                    <h3>Stockage (Store)</h3>
+                    <div class="step-details" id="step4">
+                        <p>Le résultat est enregistré :</p>
+                        <ul>
+                            <li>Stockage en mémoire centrale</li>
+                            <li>Mise à jour des registres</li>
+                            <li>Actualisation des drapeaux d'état</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bus-system">
+            <h2>Le Système de Bus</h2>
+            <div class="bus-simulator">
+                <div class="bus-component cpu">CPU</div>
+                <div class="bus-line">
+                    <div class="data-packet"></div>
+                </div>
+                <div class="bus-component memory">Mémoire</div>
+                <button onclick="simulateBusTransfer()" class="simulate-btn">Simuler un transfert</button>
+            </div>
+        </section>
+
+        <section class="memory-organization">
+            <h2>Organisation de la Mémoire</h2>
+            <div class="memory-visualization">
+                <div class="memory-block ram" onmouseover="showMemoryInfo('ram')" onmouseout="hideMemoryInfo()">
+                    <h3>RAM</h3>
+                    <div class="memory-speed">Vitesse moyenne</div>
+                </div>
+                <div class="memory-block cache" onmouseover="showMemoryInfo('cache')" onmouseout="hideMemoryInfo()">
+                    <h3>Cache</h3>
+                    <div class="memory-speed">Très rapide</div>
+                </div>
+                <div class="memory-block registers" onmouseover="showMemoryInfo('registers')" onmouseout="hideMemoryInfo()">
+                    <h3>Registres</h3>
+                    <div class="memory-speed">Ultra rapide</div>
+                </div>
+            </div>
+            <div id="memory-info" class="memory-info"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Créé le : <span id="date"></span> | Par John Doe</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
